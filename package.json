@@ -1,6 +1,6 @@
 {
   "name": "sonetel_desktop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Experimental Sonetel web app for the desktop",
   "main": "main.js",
   "scripts": {
