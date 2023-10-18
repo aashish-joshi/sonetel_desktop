@@ -18,11 +18,21 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        maintainer: 'Aashish Joshi',
+        homepage: 'https://github.com/aashish-joshi/sonetel_desktop',
+        genericName: 'sonetel',
+        name: 'sonetel',
+        icon: './sonetel.ico',
+        categories: ['Office'],
+      },
     },
     {
       name: '@electron-forge/maker-rpm',
-      config: {},
+      config: {
+        name: 'sonetel',
+        setupIcon: './sonetel.ico',
+      },
     },
   ],
   plugins: [
