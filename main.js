@@ -38,6 +38,19 @@ mainMenu.append(new MenuItem({
         shell.beep();
         app.quit();
       }
+    },
+    {
+      label: 'About',
+      click: () => {
+        loadWindow('https://sonetel.com/en/about/');
+      }
+    },
+    {
+      label: 'Help',
+      click: () => {
+        loadWindow('https://sonetel.com/en/help/help-topics/');
+      },
+      accelerator: process.platform === 'darwin' ? 'Command+H' : 'Ctrl+H',
     }
   ]
 }));
@@ -48,15 +61,8 @@ mainMenu.append(new MenuItem({
     {
       label: 'About',
       click: () => {
-        loadWindow('https://sonetel.com/en/about/');
+        loadWindow('https://github.com/aashish-joshi/sonetel_desktop');
       }
-    },
-    {
-      label: 'Online Help',
-      click: () => {
-        loadWindow('https://sonetel.com/en/help/help-topics/');
-      },
-      accelerator: process.platform === 'darwin' ? 'Command+H' : 'Ctrl+H',
     }
   ],
 }))
@@ -71,7 +77,7 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  win.loadURL('https://app.sonetel.com')
+  win.loadURL('https://app.sonetel.com/messages/conversations')
 
   // win.webContents.executeJavaScript('localStorage.getItem("accessToken");', true)
   // .then(result => {
